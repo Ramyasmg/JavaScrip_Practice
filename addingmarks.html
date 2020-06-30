@@ -1,0 +1,106 @@
+<html>
+    <head>
+        <title> Table</title>
+       <style>
+           table, th, td {
+            border: 1px solid black;
+			 border-collapse: collapse;
+			  padding: 10px;
+          }
+		    
+		
+        </style>
+    </head>
+
+
+    <body>
+	<div class="myDiv">
+	
+	<h1>Here is My Marks Card!!</h1>
+    <p>5 th sem,Electronics and Communication,Vishweshwarayya Technology University,Karnataka</p>
+
+    <p>Calculatig total and Average of Score using Function</p>
+	</div>
+	
+	<br>
+	
+	
+        <table>
+            <h2>Marks Table</h2>
+    
+        <tr>
+            <th>Subject</th>
+            <th>Marks</th>
+        </tr>
+
+        <tr>
+           <td>Management and Entrepreneurship Development</td>
+           <td demo1>78</td>
+        </tr>
+        <tr>
+           <td>OOPS using C++</td>
+           <td>78</td>
+        </tr>
+        <tr>
+            <td>Digital Signal Processing</td>
+            <td>80</td>
+         </tr>
+         <tr>
+            <td>Operating System</td>
+            <td>77</td>
+         </tr>
+         <tr>
+            <td>Verilog HDL</td>
+            <td>89</td>
+         </tr>
+         <tr>
+            <td>Information theory and Coding</td>
+            <td>81</td>
+         </tr>
+		 <tr>
+           <td> Total </td>
+           <td id=demo1></td>
+ 
+       </tr>
+       <tr>
+           <td> Average </td>
+           <td id=demo2></td>
+ 
+       </tr>
+
+        </table>
+		
+		<script>
+
+            function calculateTotal()
+            {
+               total=78+78+80+77+89+81;
+               return total;
+               avg=total/6;
+
+            }
+            
+            function calculateAvg()
+            {
+               total=78+78+80+77+89+81;
+               avg=total/6;
+               return avg;
+
+            }
+x=calculateTotal();
+y=calculateAvg();
+
+
+document.getElementById("demo1").innerHTML =x;
+document.getElementById("demo2").innerHTML =y;
+
+
+</script>
+		
+		
+		
+		
+    </body>
+
+
+</html>

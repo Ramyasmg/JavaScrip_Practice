@@ -1,0 +1,54 @@
+<html>
+<head>
+
+</head>
+
+</html>
+
+
+<body>
+    <p id=demo1></p>
+   <script>
+        function myfun()
+        {   var patt1=/^[A-Za-z]+$/;
+             var patt2=/^[0-9]+$/;
+    
+            var a=document.getElementById("user_name").value;
+            var b=document.getElementById("pno").value;
+         if(a.match(patt1))
+            {
+               document.getElementById("demo1").innerHTML="Name "+a; 
+            }
+            else{  
+    
+               alert("Only alphabets are allowed for Name");
+    
+            }
+            if(b.match(patt2))
+            {
+               document.getElementById("demo1").innerHTML="PH No: "+b; 
+            } 
+            else{  
+    
+               alert("Only numbers are allowed for Phone number");
+    
+            }
+        }
+
+        </script>
+
+<form onsubmit=" return myfun()">
+Name:<input type="text" id="user_name" value="">
+<br><br>
+Phone Number:<input type="text" id="pno"><br><br>
+
+Subjects Required:<br>
+<input type="checkbox" name="sub" required>HTML
+<input type="checkbox" name="sub">CSS
+<input type="checkbox" name="sub">JavaScript<br><br> 
+<input type="submit"  value="Submit">
+
+</form>
+
+
+</body>

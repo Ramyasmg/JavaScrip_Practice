@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>hide demo</title>
+  <h1>Welcome</h1>
+  <style>
+  span {
+    background: #def3ca;
+    padding: 3px;
+    float: left;
+  }
+
+  h1{
+    text-align: center;
+  }
+  </style>
+
+  <script src="https://code.jquery.com/jquery-3.5.0.js"></script>
+</head>
+<body>
+ 
+<button id="hider">Click me to Hide</button>
+<br><br>
+<button id="shower">Click me to Show again</button>
+<br><br>
+<div>
+  <span>Where</span> <span>there</span> <span>is</span>
+  <span>a</span> <span>will</span> <span>there</span>
+  <span>is</span> <span>way...</span><span>So Never stop learning....</span>
+</div>
+ 
+<script>
+  $("button").click(function(){
+  $("span").css("color", "Blue");
+})
+
+
+  $("h1").css("color", "Orange");
+ 
+
+
+$( "#hider" ).click(function() {
+  $( "span:last-child" ).hide( "fast", function() {
+    // Use arguments.callee so we don't need a named function
+    $( this ).prev().hide( "fast", arguments.callee );
+  });
+});
+
+$( "#shower" ).click(function() {
+  $( "span" ).show( 2000 );
+});
+</script>
+ 
+</body>
+</html>

@@ -1,0 +1,48 @@
+<html>
+<head>
+    <h2>Interesting information about cats</h2>
+</head>
+
+</html>
+
+<body>
+<div id=demo>
+<p>Cats can hear sounds too faint or too high in frequency for human ears, 
+    such as those made by mice. They can also see in near darkness
+    Cats have relatively few taste buds compared to humans. <br>
+    Domestic and wild cats share a gene mutation that leaves them with no ability to taste sweetness
+    The average life expectancy for male indoor cats at birth is around 12 to 14 years.<br>
+    However, there have been reports of cats reaching into their 30s, 
+    with the oldest known cat, Creme Puff, dying at a verified age of 38.</p><br>
+</div>
+
+<p id="demo2"></p>
+
+<button onclick="displayDate()" > Time </button>
+
+<br><br><br>
+
+
+<div onmouseover="myfun(this)"  
+style="background-color:pink;width:120px;height:20px;padding:40px;">
+Mouse Over Me</div>
+
+<br>
+
+<button  onclick="this.innerHTML='Have a nice day'">Try it</button>
+
+<script>
+function myfun(obj) {
+  obj.innerHTML = "Thank You"
+}
+
+function displayDate() {
+  document.getElementById("demo2").innerHTML = Date();
+}
+</script>
+
+
+
+
+
+</body>

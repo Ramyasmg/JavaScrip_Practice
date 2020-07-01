@@ -1,0 +1,41 @@
+<html>
+<head>
+    <h4>Finding 5th ,7th and 10th word from description about html</h4>
+</head>
+</html>
+
+<body>
+   
+    <p id="demo1"></p>
+    
+    <p id="demo2"></p>
+    <p id="demo3"></p>
+
+<script>
+ var str="HTML stands for Hyper Text Markup Language" +
+"HTML is the standard markup language for creating Web pages"+
+"HTML describes the structure of a Web page"+
+"HTML consists of a series of elements";
+
+var res1=str.slice(22,26);
+var res2=str.slice(34,42);
+var res3=str.slice(50,54);
+
+document.getElementById("demo1").innerHTML="5th word is :"+res1;
+document.getElementById("demo2").innerHTML="7th word is :"+res2;
+document.getElementById("demo3").innerHTML="10th word is :"+res3;
+
+
+</script>
+
+
+
+
+
+
+
+
+
+
+
+</body>

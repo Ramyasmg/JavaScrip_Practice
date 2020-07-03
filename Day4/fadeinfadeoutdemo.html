@@ -1,0 +1,69 @@
+
+<html>
+<head>
+<title>jQuery fadeIn fadeOut Effect Example</TITLE>
+
+	<!-- Including the bootstrap CDN -->
+	<link rel="stylesheet" href= 
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"> 
+	<script src= 
+"https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"> 
+	</script> 
+	<script src= 
+"https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"> 
+	</script> 
+	<script src= 
+"https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"> 
+	</script> 
+
+<style>
+body,input {
+	font-family: Helvetica, Arial;
+}
+
+#fade, #fadeTo {
+	width: 200px;
+	height: 100px;
+	padding: 10px;
+	border: 1px solid black;
+	background-color:palegoldenrod;
+}
+</style>
+</head>
+<body>
+
+	<input type="button" value="Fade Out" onclick="fadeToggle('fade', this)" />
+	<br><br>
+	
+	<div id="fade"> Text in div for fadeIn, fadeOut example</div>
+	<br>
+	
+	<input type="button" value="FadeTo 50%" onclick="fadeToToggle('fadeTo', this)" /><br>
+	<div id="fadeTo"> Text in div for fadeTo example</div>
+
+</body>
+<script>
+// javascript function for fade effect toggling
+	function fadeToggle(div_id, button) {
+
+		if (button.value == 'Fade Out') {
+			$('#' + div_id).fadeOut('slow');
+			button.value = 'Fade In';
+		} else {
+			$('#' + div_id).fadeIn(2000);
+			button.value = 'Fade Out';
+		}
+	}
+	
+	function fadeToToggle(div_id, button) {
+
+		if (button.value == 'FadeTo 50%') {
+			$('#' + div_id).fadeTo('slow' , 0.5);
+			button.value = 'FadeTo 100%';
+		} else {
+			$('#' + div_id).fadeTo(4000 , 1.0);
+			button.value = 'FadeTo 50%';
+		}
+	}
+</script>
+</html>
